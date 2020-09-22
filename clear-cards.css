@@ -1,0 +1,11 @@
+.clear-card {
+    border: 1px black solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 40px;
+    width: 80px;
+}
+
+.clear-cards-container {
+    display: flex;
+    flex-direction: row;
+}
