@@ -1,0 +1,44 @@
+.clear-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clear-card {
+    border: 1px black solid;
+    margin: 0.4em;
+    padding: 0.2em 0.4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 16.5%;
+}
+
+.clear-card-title {
+    font-weight: bold;
+}
+
+.clear-card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.clear-card-row div {
+    margin: 0em 0.25em;
+}
+
+.clear-card-row .clear-card-value {
+    flex: 3;
+    text-align: right;
+}
+
+.clear-card-row .clear-card-unit {
+    flex: 1;
+    font-size: 0.9em;
+}
+
+.clear-card-row .clear-card-label {
+    flex: 2;
+    text-align: center;
+    font-size: 0.8em;
+}
