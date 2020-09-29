@@ -1,6 +1,6 @@
-import IClearCard from "../interfaces/clear-card.interface";
+import {IClearCard} from "../interfaces/clear-card.interface";
 
-class ClearCardsManager {
+export class ClearCardsManager {
     InitContainer(element: HTMLElement, cards: IClearCard[]): void {
         element.innerHTML = '';
         cards.forEach((card: IClearCard) => {
@@ -14,4 +14,3 @@ class ClearCardsManager {
         element.classList.add('clear-card');
     }
 }
-export = ClearCardsManager;

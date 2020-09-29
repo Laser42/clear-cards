@@ -1,6 +1,5 @@
-interface IClearCardRow {
+export interface IClearCardRow {
     value: number;
     unit: string;
     label?: string;
 }
-export = IClearCardRow;
