@@ -2,47 +2,89 @@
 
 <head>
     Demo
-    <link rel="stylesheet" href="src/css/clear-cards-colors-blue.css">
-    <link rel="stylesheet" href="src/css/clear-cards-theme-classic.css">
-    <link rel="stylesheet" href="src/css/clear-cards-core.css">
+    <link rel="stylesheet" href="css/clear-cards-colors-blue.css">
+    <link rel="stylesheet" href="css/clear-cards-theme-classic.css">
+    <link rel="stylesheet" href="css/clear-cards-core.css">
 </head>
 
 <body>
-    <main class="clear-cards-container">
-        <div class="clear-card">
-            <div class="clear-card-title">Стоимость ценных бумаг</div>
-            <div class="clear-card-row">
-                <div class="clear-card-value">122,3</div>
-                <div class="clear-card-unit">руб.</div>
-                <div class="clear-card-label">за акцию</div>
-            </div>
-        </div>
-        <div class="clear-card">
-            <div class="clear-card-title">Показатели доходности</div>
-            <div class="clear-card-row">
-                <div class="clear-card-value">122,3</div>
-                <div class="clear-card-unit">руб.</div>
-                <div class="clear-card-label">Yield to maturity</div>
-            </div>
-            <div class="clear-card-row">
-                <div class="clear-card-value">122,3</div>
-                <div class="clear-card-unit">руб.</div>
-                <div class="clear-card-label">Earnings per share</div>
-            </div>
-        </div>
-        <div class="clear-card"></div>
-        <div class="clear-card"></div>
-        <div class="clear-card"></div>
-        <div class="clear-card"></div>
-        <div class="clear-card"></div>
-        <div class="clear-card"></div>
+    <main>
     </main>
-    <script lang="javascript" src="src/js/clear-cards.js"></script>
+    <script lang="javascript" src="js/clear-cards.js"></script>
     <script lang="javascript">
         document.addEventListener('DOMContentLoaded', () => {
             let container = document.getElementsByTagName('main')[0];
             let cards = [
-                { title: 'Тестовая карточка' }
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                },
+                { 
+                    title: 'Курс валюты',
+                    rows: [
+                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
+                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                    ]
+                }
             ]
             let manager = new ClearCardsManager();
             manager.InitContainer(container, cards)
