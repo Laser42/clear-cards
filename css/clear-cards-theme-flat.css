@@ -1,0 +1,24 @@
+.clear-card {
+    border: none;
+    background: var(--card-background);
+}
+
+.clear-card-title {
+    color: var(--card-title);
+}
+
+.clear-card-row .clear-card-value {
+    padding: 0em 0.1em;
+    background: var(--value-background);
+    color: var(--value-text);
+    font-size: 1.2em;
+}
+
+.clear-card-row .clear-card-unit {
+    color: var(--additional-text);
+    padding: 0em 0.1em;
+}
+
+.clear-card-row .clear-card-label {
+    color: var(--additional-text);
+}

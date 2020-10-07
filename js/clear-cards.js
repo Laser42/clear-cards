@@ -40,7 +40,7 @@ class ClearCardsManager {
      * @param {ClearCard[]} cards - array of cards
      */
     InitContainer(element, cards) {
-        element.classList.add('clead-cards-container');
+        element.classList.add('clear-cards-container');
         element.innerHTML = '';
         cards.forEach((card) => {
             element.append(this.BuildCardElement(card));
