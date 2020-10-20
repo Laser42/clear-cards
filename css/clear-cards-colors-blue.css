@@ -1,11 +1,11 @@
 body {
-    --card-title: #e2e2e2;
+    --card-title: #ececec;
     --card-background: #2f95c4;
+    --card-shadows-top-left: #46ddff;
+    --card-shadows-bottom-right: #184d66;
+
     --value-background: none;
-    --value-text: #e2e2e2;
-    --additional-text:  #e2e2e2;
+    --value-text: #ececec;
 
-    background: #2f95c4;
-
-/*     background: #2f95c467; */
+    --additional-text:  #ececec;
 }

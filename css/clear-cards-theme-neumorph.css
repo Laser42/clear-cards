@@ -1,11 +1,15 @@
-.clear-card {
-    border-radius: 1em;
-    border-left: 1px solid #46ddff;
-    border-top: 1px solid #46ddff;
-    border-right: 1px solid #184d66;
-    border-bottom: 1px solid #184d66;
+.clear-card, .clear-cards-container {
+    border-radius: 1em;    
     background: var(--card-background);
-    box-shadow: 0.25em 0.25em 0.4em #184d66, -0.25em -0.25em 0.4em #46ddff;
+}
+
+.clear-card {
+    border-left: 1px solid var(--card-shadows-top-left);
+    border-top: 1px solid var(--card-shadows-top-left);
+    border-right: 1px solid var(--card-shadows-bottom-right);
+    border-bottom: 1px solid var(--card-shadows-bottom-right);
+    box-shadow: 0.25em 0.25em 0.4em var(--card-shadows-bottom-right), 
+        -0.25em -0.25em 0.4em var(--card-shadows-top-left);
 }
 
 .clear-card-title {
