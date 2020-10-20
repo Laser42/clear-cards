@@ -1,0 +1,11 @@
+body {
+    --card-title: #e2e2e2;
+    --card-background: #2f95c4;
+    --value-background: none;
+    --value-text: #e2e2e2;
+    --additional-text:  #e2e2e2;
+
+    background: #2f95c4;
+
+/*     background: #2f95c467; */
+}
