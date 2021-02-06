@@ -1,11 +1,14 @@
+.clear-cards-container {
+    background-color: var(--card-background);
+}
+
 .clear-card {
     border-radius: 1em;
-    border-left: 1px solid #46ddff;
-    border-top: 1px solid #46ddff;
-    border-right: 1px solid #184d66;
-    border-bottom: 1px solid #184d66;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--shadow_top_left) var(--shadow_bottom_right) var(--shadow_bottom_right) var(--shadow_top_left);
     background: var(--card-background);
-    box-shadow: 0.25em 0.25em 0.4em #184d66, -0.25em -0.25em 0.4em #46ddff;
+    box-shadow: 0.25em 0.25em 0.4em var(--shadow_bottom_right), -0.25em -0.25em 0.4em var(--shadow_top_left);
 }
 
 .clear-card-title {
