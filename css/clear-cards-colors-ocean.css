@@ -1,0 +1,10 @@
+body {
+    --container-background: #2f95c499;
+    --card-title: #e2e2e2;
+    --card-background: #2f95c4;
+    --value-background: none;
+    --value-text: #e2e2e2;
+    --additional-text:  #e2e2e2;
+    --shadow-light:  #46ddff;
+    --shadow-dark: #184d66;
+}

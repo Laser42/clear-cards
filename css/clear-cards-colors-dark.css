@@ -5,6 +5,6 @@ body {
     --value-background: none;
     --value-text: #e2e2e2;
     --additional-text:  #e2e2e2;
-    --shadow_top_left:  #656565;
-    --shadow_bottom_right: #2d2d2d;
+    --shadow-light:  #656565;
+    --shadow-dark: #2d2d2d;
 }

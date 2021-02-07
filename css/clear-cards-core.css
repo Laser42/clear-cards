@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
 }
 
 .clear-card {

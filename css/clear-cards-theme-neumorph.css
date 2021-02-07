@@ -6,9 +6,9 @@
     border-radius: 1em;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--shadow_top_left) var(--shadow_bottom_right) var(--shadow_bottom_right) var(--shadow_top_left);
+    border-color: var(--shadow-light) var(--shadow-dark) var(--shadow-dark) var(--shadow-light);
     background: var(--card-background);
-    box-shadow: 0.25em 0.25em 0.4em var(--shadow_bottom_right), -0.25em -0.25em 0.4em var(--shadow_top_left);
+    box-shadow: 0.25em 0.25em 0.4em var(--shadow-dark), -0.25em -0.25em 0.4em var(--shadow-light);
 }
 
 .clear-card-title {
