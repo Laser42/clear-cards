@@ -1,3 +1,7 @@
+.clear-cards-container {
+    background-color: var(--container-background);
+}
+
 .clear-card {
     border: none;
     background: var(--card-background);
