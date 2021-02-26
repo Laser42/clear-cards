@@ -1,17 +1,40 @@
 <html>
 
 <head>
-    Demo
     <link rel="stylesheet" href="css/clear-cards-core.css">
-    <link rel="stylesheet" href="css/clear-cards-colors-blue.css">
-    <link rel="stylesheet" href="css/clear-cards-theme-neumorph.css">
+    <link rel="stylesheet" href="css/clear-cards-colors-ocean.css">
+    <link rel="stylesheet" href="css/clear-cards-theme-neon.css">
 </head>
 
 <body>
+    <header>
+        <input list="theme" placeholder="Set theme">
+        <datalist id="theme">
+            <option value="Flat">
+            <option value="Neumorph">
+            <option value="Neon">
+        </datalist>
+        <input list="colors" placeholder="Set color palette">
+        <datalist id="colors">
+            <option value="Ocean">
+            <option value="Grass">
+            <option value="Dark">
+            <option value="Light">
+        </datalist>
+    </header>
     <main>
     </main>
     <script lang="javascript" src="js/clear-cards.js"></script>
     <script lang="javascript">
+        let themeInput = document.querySelector('input[list=theme]');
+        let colorsInput = document.querySelector('input[list=colors]');
+        themeInput.addEventListener('input', () => {
+            HandleStyleSheetChange(themeInput);
+        });
+        colorsInput.addEventListener('input', () => {
+            HandleStyleSheetChange(colorsInput);
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             let container = document.getElementsByTagName('main')[0];
             let cards = [
@@ -38,6 +61,28 @@
             let manager = new ClearCardsManager();
             manager.InitContainer(container, cards);
         });
+
+        function ChangeStyleSheetLink(type, name) {
+            let linkElement = document.querySelector(`link[rel=stylesheet][href*=clear-cards-${type}]`);
+            let newLinkElement = document.createElement('link');
+            newLinkElement.setAttribute('rel', 'stylesheet');
+            newLinkElement.setAttribute('href', `css/clear-cards-${type}-${name.toLowerCase()}.css`)
+            linkElement.remove();
+            let headElement = document.getElementsByTagName('head')[0];
+            headElement.appendChild(newLinkElement);
+        }
+
+        function HandleStyleSheetChange(input) {
+            let inputType = input.getAttribute('list');
+            let options = document.getElementById(inputType).childNodes;
+            for (var optNum = 0; optNum < options.length; optNum++) {
+                if (options[optNum].value === input.value) {
+                    ChangeStyleSheetLink(inputType, input.value);
+                    input.value = '';
+                    break;
+                }
+            }
+        }
     </script>
 </body>
 
