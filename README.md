@@ -61,7 +61,12 @@ manager.InitContainer(container, cards);
 ### Style customization: themes and colors
 You can start with your own color stylesheet. For example, add your enterprise's brand colours 
 Here is color variables description.
-* 
+* --container-background: Usually it's lighter than --card-backround
+* --card-title: Usually, this is a little bit darket than --value-text to make right focus
+* --card-background: Card background itself. I recommend to put your brand main color here before doing something else 
+* --value-background: Usually value and additional text colors are the same, but you can change that
+* --value-text, --additional-text: By default, the font size of value is greater than additional text, so you can leave their colors identical
+* --shadow-light, --shadow-dark: These vars used in neumorph and neon themes to apply some visual effects. To generate them for your main (--card-backround) color, I recommend to use a calculator, for example, https://neumorphism.io/
 
 ### Cards' events
 Currently there is no built-in event handlers
