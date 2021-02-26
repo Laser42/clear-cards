@@ -55,9 +55,13 @@ let cards = [
 ```js
 let container = document.getElementsByTagName('main')[0];
 let manager = new ClearCardsManager();
-manager.InitContainer(container, cards)
+manager.InitContainer(container, cards);
 ```
 
 ### Style customization: themes and colors
+You can start with your own color stylesheet. For example, add your enterprise's brand colours 
+Here is color variables description.
+* 
 
 ### Cards' events
+Currently there is no built-in event handlers
