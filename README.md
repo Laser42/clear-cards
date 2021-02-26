@@ -68,5 +68,11 @@ Here is color variables description.
 * --value-text, --additional-text: By default, the font size of value is greater than additional text, so you can leave their colors identical
 * --shadow-light, --shadow-dark: These vars used in neumorph and neon themes to apply some visual effects. To generate them for your main (--card-backround) color, I recommend to use a calculator, for example, https://neumorphism.io/
 
-### Cards' events
-Currently there is no built-in event handlers
+### TODO
+* Versioning
+* Event handlers for card, card row clicks/dblclicks
+* Unit label position setting
+* Advanced number format setting
+* Card individual background
+* Chart in card
+
