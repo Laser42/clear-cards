@@ -70,10 +70,9 @@ You can start with your own color stylesheet. For example, add your enterprise's
 If built-in themes don't satisfy your needs, you can define you own, describing styles from container to card blocks
 
 ### TODO
-* Versioning
-* Event handlers for card, card row clicks/dblclicks
-* Unit label position setting
-* Advanced number format setting
-* Card individual background
-* Chart in card
+* Event handlers for card, card row clicks/dblclicks (0.8.0)
+* Unit label position setting (0.8.1)
+* Advanced number format setting (0.8.2)
+* Card individual background (0.9.0)
+* Chart in card (1.0.0)
 
