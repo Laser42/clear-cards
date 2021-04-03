@@ -39,78 +39,27 @@
             let container = document.getElementsByTagName('main')[0];
             let cards = [
                 {
-                    title: 'Курс валюты',
+                    title: 'Company revenue',
                     rows: [
-                        { value: 1, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                        { value: 100, unit: 'RVL', label: 'Not bad' }
                     ]
                 },
                 {
-                    title: 'Курс валюты',
+                    title: 'Cost to income',
                     rows: [
-                        { value: 2, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                        { value: 50, unit: '%', label: 'For last year' }
                     ]
                 },
                 {
-                    title: 'Курс валюты',
+                    title: 'Share price',
                     rows: [
-                        { value: 3, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 4, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 5, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 6, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 7, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 8, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
-                    ]
-                },
-                {
-                    title: 'Курс валюты',
-                    rows: [
-                        { value: 20, unit: 'RVL', label: 'за 1 USD' },
-                        { value: 22, unit: 'RVL', label: 'за 1 EUR' }
+                        { value: 1, unit: 'RVL', label: 'equity stock' },
+                        { value: 2, unit: 'RVL', label: 'preference stock' }
                     ]
                 }
-            ]
+            ];
             let manager = new ClearCardsManager();
-            manager.InitContainer(container, cards)
+            manager.InitContainer(container, cards);
         });
 
         function ChangeStyleSheetLink(type, name) {
