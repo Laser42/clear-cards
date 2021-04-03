@@ -1,3 +1,9 @@
+const CC_CLASSES_HANDBOOK = {
+    Container: 'clear-cards-container',
+    Overlay: 'clear-cards-overlay',
+    Card: 'clear-card'
+}
+
 /**
  * Card row class
  */
@@ -23,10 +29,12 @@ class ClearCard {
      * 
      * @param {string} title - card title
      * @param {ClearCardRow[]} rows - rows array
+     * @param {Function} clickFn - click handle function
      */
-    constructor(title, rows) {
+    constructor(title, rows, clickFn) {
         this.title = title;
         this.rows = rows;
+        this.clickFn = clickFn;
     }
 }
 
@@ -40,18 +48,31 @@ class ClearCardsManager {
      * @param {ClearCard[]} cards - array of cards
      */
     InitContainer(element, cards) {
-        element.classList.add('clear-cards-container');
+        element.classList.add(CC_CLASSES_HANDBOOK.Container);
         element.innerHTML = '';
         cards.forEach((card) => {
-            element.append(this.BuildCardElement(card));
+            let cardElement = this.BuildCardElement(card);
+            cardElement.addEventListener('click', card.clickFn ?? this.DefaultClickHandler);
+            element.append(cardElement);
         });
+        this.InitOverlay();
+    }
+
+    InitOverlay() {
+        let overlayElement = document.querySelector(`.${CC_CLASSES_HANDBOOK.Overlay}`);
+        if (overlayElement)
+            return;
+
+        overlayElement = document.createElement('div');
+        overlayElement.className = CC_CLASSES_HANDBOOK.Overlay;
+        document.querySelector('body').append(overlayElement);
     }
 
     /**
      * Builds card dom element from object
      * @param {ClearCard} card - card instance
      */
-    BuildCardElement(card) {        
+    BuildCardElement(card) {
         let cardElement = document.createElement('div');
         cardElement.className = 'clear-card';
 
@@ -59,7 +80,7 @@ class ClearCardsManager {
         titleElement.className = 'clear-card-title';
         titleElement.innerText = card.title;
         cardElement.append(titleElement);
-        
+
         card.rows.forEach((row) => {
             let valueElement = document.createElement('div');
             valueElement.className = 'clear-card-value';
@@ -82,5 +103,12 @@ class ClearCardsManager {
         });
 
         return cardElement;
+    }
+
+    DefaultClickHandler(event) {
+        document.querySelector('.clear-cards-overlay').classList.add('active');
+        let cardDetailsElement = document.createElement('div');
+        cardDetailsElement.className = 'clear-card-details';
+        document.querySelector('body').append(cardDetailsElement);
     }
 }
